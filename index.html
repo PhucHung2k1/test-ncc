@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        background-color: black;
+        height: 100vh;
+        width: 150px; /* Chiều rộng của thanh nav */
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar-item {
+        padding: 15px;
+        color: white;
+        text-align: start;
+        border-bottom: 0.2px solid rgb(165, 146, 146);
+        cursor: pointer;
+      }
+      .content {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        margin-left: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .img {
+        height: 122px;
+        width: 310px;
+      }
+
+      .footer {
+        height: 79px;
+
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-left: 150px;
+        border-top: 1px solid rgb(230, 194, 194);
+        padding-left: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+      }
+      .middle {
+        background-color: #efefef;
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        text-align: center;
+      }
+      .flex-row {
+        display: flex;
+        width: 98%;
+
+        justify-content: space-between;
+      }
+
+      .flex-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .image-container {
+        width: 128px;
+        height: 128px;
+        /* align-self: flex-start; */
+      }
+
+      .text-container {
+        padding-left: 10px; /* Khoảng cách giữa ảnh và text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- Nội dung thanh nav -->
+      <div class="navbar-item">Home</div>
+      <div class="navbar-item">Service</div>
+      <div class="navbar-item">News</div>
+      <div class="navbar-item">Blog</div>
+      <div class="navbar-item">Contact</div>
+    </div>
+
+    <div class="content">
+      <!-- Nội dung trang -->
+      <div>
+        <img src="images/nccImage.jpg" alt="NCC Image" class="img" />
+      </div>
+      <div class="middle">
+        <h2>Lorem ipsum dolor sit asmet?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique
+          consequat placerat. Vestibulum auctor pellentesque sem, eu posuere
+          erat hendrerit quis. Maecenas vel consequat turpis. Nam facilisis,
+          ligula in mattis sodales, augue justo tristique nulla, sed lacinia
+          ante eros ut mi. Morbi vitae diam augue. Aliquam vel mauris a nibh
+          auctor commodo. Praesent et nisi eu justo eleifend convallis. Quisque
+          suscipit maximus vestibulum. Phasellus congue mollis orci, sit amet
+          luctus augue tristique eu. Donec vulputate odio neque, sed semper
+          turpis pellentesque a.
+        </p>
+      </div>
+
+      <div class="flex-row">
+        <div class="flex-item">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <div class="flex-container">
+            <!-- Phần đầu chứa ảnh -->
+            <div class="image-container">
+              <img
+                src="images/dwImage.jpg"
+                alt="DW Image"
+                class="image-container"
+              />
+            </div>
+
+            <!-- Phần sau chứa text -->
+            <div class="text-container">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <div class="flex-container">
+            <!-- Phần đầu chứa ảnh -->
+
+            <img
+              src="images/urlImage.jpg"
+              alt="DW Image"
+              class="image-container"
+            />
+
+            <!-- Phần sau chứa text -->
+            <div class="text-container">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <div class="flex-container">
+            <!-- Phần đầu chứa ảnh -->
+            <div class="image-container">
+              <img
+                src="images/cssImage.jpg"
+                alt="DW Image"
+                class="image-container"
+              />
+            </div>
+
+            <!-- Phần sau chứa text -->
+            <div class="text-container">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <!-- Nội dung footer -->
+      <p>Copyright © 2021</p>
+    </div>
+  </body>
+</html>
